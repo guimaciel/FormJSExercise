@@ -1,0 +1,64 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<form action="/" method="GET" class="form-class">
+<!--         
+- name, email and password required
+- age, phone, birthdate, gender(M, F), country(Brazil, Canada, Japan, Turkey), picture, Terms and Conditions, Newsletter not required
+- reset and submit buttons
+-->
+    <label>Name:</label><input type="text" id="name" required />
+    <label>Password:</label><input type="text" id="password" required />
+    <label>Age:</label><input type="number" id="age" />
+    <label>Phone:</label><input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+    <label>Birthdate:</label><input type="date" id="birthdate" />
+    
+    <fieldset>
+        <legend>Gender:</legend>
+        <div>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </div>
+    </fieldset>
+
+    <label for="country">Country:</label>
+    <select name="country" id="country-select">
+        <option value="">--Please choose an option--</option>
+        <option value="brazil">Brazil</option>
+        <option value="canada">Canada</option>
+        <option value="japan">Japan</option>
+        <option value="turkey">Turkey</option>
+    </select>
+
+    <label for="picture">Choose a picture:</label>
+    <input type="file"
+        id="picture" name="picture"
+        accept="image/png, image/jpeg">
+
+    <fieldset>
+        <legend>Terms and Conditions:</legend>
+    
+        <div>
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">I accept terms and conditions</label>
+        </div>
+    </fieldset>
+
+    <button type="reset">Reset</button>
+    <button type="submit" id="submit">Submit</button>
+</form>
+<div id="results">
+<!--   Name: John -->
+<!--   All fields added -->
+</div>
+
+</body>
+</html>
